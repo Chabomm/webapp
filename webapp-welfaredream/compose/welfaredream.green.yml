@@ -1,0 +1,20 @@
+version: '3'
+services:
+    welfaredream:
+        image: welfaredream
+        container_name: welfaredream-green
+        env_file: ../.env.production
+        build:
+            context: ../
+        restart: always
+        environment:
+            - PORT=11012
+        ports:
+            - 11012:11012
+        volumes:
+            - ../../resource:/app/public/resource
+        networks:
+            - common
+networks:
+    common:
+        external: true

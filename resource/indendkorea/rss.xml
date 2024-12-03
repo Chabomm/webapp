@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>인디앤드코리아</title>
+        <link>https://indendkorea.com/</link>
+        <description>임직원과 고객을 생각하며 함께 가치를 창조하는 인디앤드코리아입니다.</description>
+        <item>
+            <title>회사소개</title>
+            <link>https://indendkorea.com/about/philosophy</link>
+            <description>임직원과 고객을 생각하며 함께가치를 창조하는 인디앤드코리아입니다.</description>
+            <pubDate>2023-11-08T13:41:07+09:00</pubDate>
+            <guid>https://indendkorea.com/about/philosophy</guid>
+        </item>
+        <item>
+            <title>사업분야</title>
+            <link>https://indendkorea.com/business/mall</link>
+            <description>기업과 임직원의 행복을 여는 문! 선택적 복지제도 인디앤드코리아에 답이 있습니다.</description>
+            <pubDate>2023-11-08T13:41:07+09:00</pubDate>
+            <guid>https://indendkorea.com/business/mall</guid>
+        </item>
+        <item>
+            <title>파트너</title>
+            <link>https://indendkorea.com/partner</link>
+            <description>수많은 파트너사들이 인디앤드와 함께하고 있습니다.</description>
+            <pubDate>2023-11-08T13:41:07+09:00</pubDate>
+            <guid>https://indendkorea.com/partner</guid>
+        </item>
+        <item>
+            <title>오시는 길</title>
+            <link>https://indendkorea.com/#location</link>
+            <description>오시는 길</description>
+            <pubDate>2023-11-08T13:41:07+09:00</pubDate>
+            <guid>https://indendkorea.com/#location</guid>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,24 @@
+version: '3'
+services:
+    backend:
+        image: backend
+        build: ./
+        container_name: backend
+        volumes:
+            - ../data/:/usr/src/app/data/
+            - ./:/usr/src/app
+            - ../resource/:/usr/src/app/resource/
+        ports:
+            - '5100:5100'
+        env_file: ../.env
+        environment:
+            - PROFILE=production
+            - HOST=https://api.bokjidream.com
+            - HOST_IP=0.0.0.0
+        networks:
+            - common
+        logging:
+            driver: json-file
+networks:
+    common:
+        external: true

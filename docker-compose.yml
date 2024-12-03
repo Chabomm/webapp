@@ -1,0 +1,109 @@
+version: '3'
+services:
+    database:
+        restart: always
+        image: database
+        container_name: database
+        build: ./database
+        ports:
+            - '3306:3306'
+        volumes:
+            - ./data/mysql:/var/lib/mysql
+        env_file: .env
+        environment:
+            - TZ=Asia/Seoul
+        networks:
+            - common
+
+    backend:
+        image: backend
+        container_name: backend
+        build: ./webapp-backend
+        volumes:
+            - ./data/:/usr/src/app/data/
+            - ./resource/:/usr/src/app/resource/
+            - ./webapp-backend:/usr/src/app
+        ports:
+            - '5100:5100'
+        env_file: .env
+        environment:
+            - PROFILE=development
+            - HOST=http://localhost:5100
+            - HOST_IP=localhost
+            - MYSQL_HOST=database
+        networks:
+            - common
+
+    admin:
+        image: admin
+        container_name: admin
+        build:
+            context: ./webapp-admin
+            target: dev
+        restart: always
+        command: yarn dev
+        volumes:
+            - ./webapp-admin:/app
+            - ./resource/:/app/public/resource
+            - /app/node_modules
+            - /app/.next
+        ports:
+            - '7020:7020'
+        environment:
+            - PORT=7020
+            - NODE_ENV=development
+            - NEXT_PUBLIC_HOST=http://localhost:7020
+            - NEXT_PUBLIC_BACKEND=http://backend:5100
+            - NEXT_PUBLIC_API=http://localhost:5100
+            - NEXT_PUBLIC_TOKENNAME=WEBAPP-ADMIN
+        networks:
+            - common
+
+    indendkorea:
+        container_name: indendkorea
+        build:
+            context: ./webapp-indendkorea
+            target: dev
+        restart: always
+        command: yarn dev
+        volumes:
+            - ./webapp-indendkorea:/app
+            - ./resource/:/app/public/resource
+            - /app/node_modules
+            - /app/.next
+        ports:
+            - 11000:11000
+        environment:
+            - PORT=11000
+            - NODE_ENV=development
+            - NEXT_PUBLIC_HOST=http://localhost:11000
+            - NEXT_PUBLIC_BACKEND=http://backend:5100
+        networks:
+            - common
+
+    welfaredream:
+        image: welfaredream
+        container_name: welfaredream
+        build:
+            context: ./webapp-welfaredream
+            target: dev
+        restart: always
+        command: yarn dev
+        volumes:
+            - ./webapp-welfaredream:/app
+            - ./resource/:/app/public/resource
+            - /app/node_modules
+            - /app/.next
+        ports:
+            - '11010:11010'
+        environment:
+            - PORT=11010
+            - NODE_ENV=development
+            - NEXT_PUBLIC_HOST=http://localhost:11010
+            - NEXT_PUBLIC_BACKEND=http://backend:5100
+        networks:
+            - common
+
+networks:
+    common:
+        external: true

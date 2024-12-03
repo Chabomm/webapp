@@ -1,0 +1,20 @@
+version: '3'
+services:
+    indendkorea:
+        image: indendkorea
+        container_name: indendkorea-green
+        env_file: ../.env.production
+        build:
+            context: ../
+        restart: always
+        environment:
+            - PORT=11002
+        ports:
+            - 11002:11002
+        volumes:
+            - ../../resource:/app/public/resource
+        networks:
+            - common
+networks:
+    common:
+        external: true

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+    <channel>
+        <title>복지드림</title>
+        <link>https://www.welfaredream.com</link>
+        <description>무상 복지몰 구축, 복지 컨설팅, 온·오프라인 통합 복지서비스, 맞춤형 복지 솔루션</description>
+        <item>
+            <title>복지드림이란?</title>
+            <link>https://www.welfaredream.com/intro/information</link>
+            <description>'복지를 꿈꾸다'에서 착안한 선택형 복지제도의 새로운 이름입니다.</description>
+            <pubDate>2023-11-08T13:41:07+09:00</pubDate>
+            <guid>https://www.welfaredream.com/intro/information</guid>
+        </item>
+        <item>
+            <title>구축타입</title>
+            <link>https://www.welfaredream.com/guide/about_type</link>
+            <description>우리 회사, 우리 단체만의 전용 Mall을 무료로 구축해드립니다!</description>
+            <pubDate>2023-11-08T13:41:07+09:00</pubDate>
+            <guid>https://www.welfaredream.com/guide/about_type</guid>
+        </item>
+        <item>
+            <title>복지혜택</title>
+            <link>https://www.welfaredream.com/benefit/welfare</link>
+            <description>복지드림의 다양한 복지 혜택을 소개합니다.</description>
+            <pubDate>2023-11-08T13:41:07+09:00</pubDate>
+            <guid>https://www.welfaredream.com/benefit/welfare</guid>
+        </item>
+    </channel>
+</rss>

@@ -1,0 +1,1772 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: 'SUIT';
+    font-size: 1rem;
+}
+
+.hero-title {
+    color: Red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg-primary {
+    @apply bg-white dark:bg-slate-800;
+}
+
+.btn-project {
+    @apply inline-flex text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg;
+}
+
+.project-card {
+    @apply flex flex-col m-3 rounded-xl w-full
+    transition duration-300 transform border border-gray-300
+    hover:scale-105
+    hover:shadow-lg
+    dark:border-gray-200/50
+    dark:hover:shadow-gray-400/40
+
+    hover:text-blue-600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-slate-900 dark:text-white;
+}
+
+footer {
+    @apply text-gray-600 dark:text-white
+    bg-gray-100 dark:bg-slate-600/20;
+}
+
+a {
+    @apply text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-50;
+}
+
+p {
+    @apply text-slate-500 dark:text-slate-400;
+}
+
+.mouse {
+    border: 1px solid #ebebeb;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    height: 46px;
+    margin: 50px -12px -12px;
+    order: 3;
+    position: relative;
+    width: 24px;
+}
+
+.mouse:after {
+    -webkit-animation: mouse-wheel-scroll 1.5s infinite;
+    animation: mouse-wheel-scroll 1.5s infinite;
+    background-color: #ebebeb;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    height: 4px;
+    left: 13px;
+    margin-left: -3px;
+    position: absolute;
+    top: 10px;
+    width: 2px;
+}
+/* 
+.w-1200 {
+    width: 1200px;
+    margin: 0 auto;
+} */
+
+.main_section {
+    padding: 65px 0;
+    width: 100%;
+}
+
+.section_wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+h1.main_title {
+    text-align: center;
+    color: #000;
+    font-size: 42px;
+    font-weight: 800;
+    padding: 10px 0 35px 0;
+}
+
+.y_bar {
+    width: 1.5px;
+    height: 35px;
+    background: #ff333a;
+    margin: 0 auto;
+}
+
+.image-container {
+    /* width: 50vw; */
+    /* height: 50vh; */
+    position: relative;
+}
+.image-container .image {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+    object-fit: cover;
+}
+
+.btn_transparent {
+    width: 200px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+.btn_transparent .right_eff {
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #fff;
+}
+
+.btn_transparent:hover .right_eff {
+    left: 0;
+}
+
+.btn_transparente:hover,
+.btn_transparent a:hover {
+    color: #000 !important;
+}
+
+.btn_transparent a {
+    display: inline-block;
+    width: 100%;
+    color: #fff !important;
+    position: relative;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.96, 0.25, 0.06, 1);
+    z-index: 2;
+    text-align: left;
+    text-align: center;
+}
+
+.btn_eff {
+    width: 300px;
+    height: 65px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    background: #000;
+    display: flex;
+    align-items: center;
+}
+
+.btn_eff .right_eff {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #1f4480 !important;
+}
+
+.btn_eff:hover .right_eff {
+    left: 0;
+}
+
+.btn_eff a {
+    display: inline-block;
+    width: 100%;
+    color: #fff !important;
+    position: relative;
+    font-size: 1.25rem;
+    text-decoration: none;
+    /* line-height:65px; */
+    /* line-height:100%; */
+    transition: all 0.5s cubic-bezier(0.96, 0.25, 0.06, 0.56);
+    z-index: 2;
+    text-align: left;
+}
+
+.btn_more a {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.btn_more:after {
+    content: '';
+    background-image: url(http://indendkorea.com/common/img/sub/btn_sub_arrow_white_45x10.png);
+    width: 45px;
+    height: 10px;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.btn_eff a:hover {
+    color: #fff !important;
+}
+
+.slide_banners_item {
+    width: 100%;
+    min-width: 1200px;
+    height: 100vh;
+    /* position: absolute; */
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.slide_banners_box {
+    width: 80%;
+    height: 600px;
+    margin: 0px auto;
+}
+
+.slide_banners_text {
+    position: absolute;
+    bottom: 12vh;
+    text-align: left;
+    color: #fff;
+    width: 80%;
+    height: 300px;
+    z-index: 999999999;
+}
+
+.slide_banners_title {
+    white-space: pre-line;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+}
+
+.slide_banners_line {
+    width: 100%;
+    height: 1px;
+    float: left;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.slide_banners_body {
+    white-space: pre-line;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+.m_slide_banners_item {
+    width: 100%;
+    height: 100vh;
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: center;
+    margin-top: -105px;
+}
+
+.m_slide_banners_box {
+    width: 85%;
+    height: 600px;
+    margin: 0px auto;
+}
+
+.m_slide_banners_text {
+    position: absolute;
+    bottom: 10vh;
+    text-align: left;
+    color: #fff;
+    width: 85%; /*height: 300px;*/
+    z-index: 999999999;
+    padding: 0 4%;
+    padding-bottom: 5%;
+    background: rgba(32, 32, 32, 0.7);
+}
+
+.m_slide_banners_title {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.m_slide_banners_line {
+    width: 100%;
+    height: 1px;
+    float: left;
+    background: #fff;
+    margin-bottom: 15px;
+}
+
+.m_slide_banners_body {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35em;
+    letter-spacing: -1px;
+}
+
+.body_scroll_block {
+    position: fixed;
+    top: 0px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.absolute-middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+}
+.hover-underline-animation {
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-stretch {
+    flex: 1 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m_btn_transparent {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    border: 1px solid #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* .m_btn_transparent a {
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    font-size: 1rem;
+    text-decoration: none;
+    z-index: 2;
+    text-align: left;
+} */
+
+.more_btn_img {
+    /*width:190px; height:60px;*/
+    width: 90%;
+    height: 55px;
+    line-height: 60px;
+    display: inline-block;
+    background: url('/resource/welfaredream/images/main/mobile/btn_sub_arrow_4x.png') no-repeat right 23px;
+    background-size: 25px;
+}
+
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 49.2%;
+}
+.icon-scroll {
+    width: 25px;
+    height: 40px;
+    top: 95%;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 2px #fff;
+    border-radius: 25px;
+    z-index: 9999;
+}
+.icon-scroll:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    margin-left: -2.5px;
+    top: 8px;
+    border-radius: 4px;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(37px);
+        transform: translateY(27px);
+    }
+}
+@keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(27px);
+        transform: translateY(27px);
+    }
+}
+
+/* form test */
+.errorMessage {
+    color: red;
+    font-size: 0.75rem;
+}
+.errorInput {
+    border-color: red;
+}
+
+.btn_link_orange {
+    background: #fdb812;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    width: 235px;
+    border-radius: 46px;
+    -webkit-border-radius: 46px;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+.btn_link_navy {
+    background: #011a38;
+    color: #fff !important;
+    display: inline-block;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 0;
+    width: 235px;
+    border-radius: 46px;
+    -webkit-border-radius: 46px;
+    transition: all 0.3s;
+    text-decoration: none;
+    text-align: center;
+}
+
+/* 마우스 hover시 버튼 색상 변경 */
+.change_color_btn:hover {
+    background: #707070;
+    color: #fff !important;
+    transition: all 0.3s;
+}
+
+.box_border:before,
+.box_border_right:before {
+    content: '';
+    height: calc(100%);
+    border-right: 1px solid #e5e5e5;
+    position: absolute;
+    right: -3px;
+    top: 0;
+}
+
+.box_border:after,
+.box_border_bottom:after {
+    content: '';
+    width: 305px;
+    border-bottom: 1px solid #e5e5e5;
+    position: absolute;
+    left: 10px;
+    bottom: -5px;
+}
+
+.subInquiry .agreeBox input[type='checkbox'] + label span {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url('/resource/welfaredream/images/inquiry_check.jpg') 0 0 no-repeat;
+    vertical-align: middle;
+    margin-top: -4px;
+    margin-right: 10px;
+}
+
+.subInquiry .agreeBox input[type='checkbox'] {
+    display: none;
+}
+
+#guide_1:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    height: 90px;
+    border-right: 1px solid #e5e5e5;
+}
+
+#guide_2:after {
+    content: '';
+    position: absolute;
+    right: 32px;
+    bottom: 0px;
+    width: 395px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#guide_3:before {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 0px;
+    width: 395px;
+    border-top: 1px solid #e5e5e5;
+}
+
+#guide_3:after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 5px;
+    height: 90px;
+    border-right: 1px solid #e5e5e5;
+}
+
+.triangle {
+    margin-left: 8px;
+    width: 0;
+    height: 0;
+    border-bottom: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-left: 8px solid #f39800;
+    border-right: 8px solid transparent;
+}
+
+.tab_con_box img {
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 16%);
+    transition: all 0.2s;
+    background-repeat: no-repeat;
+    background-position: left 0 bottom 0;
+    background-color: #fff;
+}
+
+.tab_con img:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+}
+
+/* [ S ] \n */
+.content {
+    white-space: pre-line;
+}
+/* [ E ] \n */
+
+.mySwiper {
+    width: 100%;
+    padding: 10px 30px !important;
+}
+
+.m_welfare_banner .swiper-slide img {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.16);
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 16%);
+    background-repeat: no-repeat;
+    background-position: center 0 bottom 0;
+    background-color: #fff;
+}
+
+#partner_swiper .swiper-pagination-bullets,
+#partner_swiper .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: -15px !important;
+    position: relative;
+}
+
+#partner_swiper .swiper-pagination-bullet-active,
+.about_type-swiper .swiper-pagination-bullet-active {
+    opacity: 0.75 !important;
+    background: #000 !important;
+}
+
+/* 구축안내 */
+.m_guide_box .num {
+    color: #707070;
+    width: 50px;
+    height: 50px;
+    background: #fff;
+}
+
+.m_guide_box .num.on {
+    background: #fdb812;
+    border-color: #fdb812;
+    color: #fff;
+}
+
+.m_guide_box .num.on:after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border: 2px solid #fdb812;
+    /* left:-6px; 
+    top:-6px;  */
+    border-radius: 30px;
+    left: 50%;
+    top: 50%;
+    margin: -30px 0 0 -30px;
+}
+
+.m_guide_box .text_area {
+    width: calc(100% - 65px);
+}
+
+.arrow {
+    background: url('/resource/welfaredream/images/guide/mobile/guide_arrow.png') no-repeat center bottom 10px;
+    padding-bottom: 44px;
+}
+
+.guide_02 {
+    background: url('/resource/welfaredream/images/guide/web/guide_process.png') right 0 top 40px no-repeat;
+    width: 1007px;
+}
+
+.guide_02 div .num {
+    background: #fff;
+    color: #707070;
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    transition: all 0.5s;
+}
+
+.guide_02 .guide_box .num.on {
+    background: #fdb812;
+    border-color: #fdb812;
+    color: #fff;
+}
+
+.guide_02 .guide_box .num.on:after {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border: 2px solid #fdb812;
+    left: -6px;
+    top: -6px;
+    border-radius: 50px;
+}
+
+.guide_02 .guide_box {
+    width: 271px;
+}
+
+.guide_02 .mid {
+    width: 430px;
+}
+
+.guide_02 .pt {
+    padding-top: 100px;
+    padding-right: 80px;
+}
+
+.section_box {
+    width: 1260px;
+    margin: 0 auto;
+}
+
+/* 메인 제공서비스 */
+.main_service_box {
+    position: relative;
+    box-shadow: inset 0 0 0 2px #aaa;
+    width: 300px;
+    height: 280px;
+}
+.main_service_box:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all 0.5s;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+.main_service_box:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    transition: all 0.5s;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.main_service_box:hover * {
+    color: #fff;
+}
+.main_service_box:hover:before {
+    width: 100%;
+    border-color: #fff;
+}
+.main_service_box:hover:after {
+    height: 100%;
+    border-color: #fff;
+}
+
+div#service_01 {
+    background: #fdb812 url('/resource/welfaredream/images/main/web/service_01.png') center 89px no-repeat;
+}
+div#service_02 {
+    background: #fff url('/resource/welfaredream/images/main/web/service_02.png') center 89px no-repeat;
+}
+div#service_03 {
+    background: #fff url('/resource/welfaredream/images/main/web/service_03.png') center 89px no-repeat;
+}
+div#service_04 {
+    background: #fff url('/resource/welfaredream/images/main/web/service_04.png') center 89px no-repeat;
+}
+div#service_05 {
+    background: #fff url('/resource/welfaredream/images/main/web/service_05.png') center 89px no-repeat;
+}
+div#service_06 {
+    background: #fff url('/resource/welfaredream/images/main/web/service_06.png') center 89px no-repeat;
+}
+div#service_07 {
+    background: #fff url('/resource/welfaredream/images/main/web/service_07.png') center 89px no-repeat;
+}
+div#service_08 {
+    background: #1565c0 url('/resource/welfaredream/images/main/web/service_08.png') center 89px no-repeat;
+    border-color: #1565c0;
+    color: #fff;
+}
+
+div#service_01:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_01On.png') center 89px no-repeat;
+}
+div#service_02:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_02On.png') center 89px no-repeat;
+}
+div#service_03:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_03On.png') center 89px no-repeat;
+}
+div#service_04:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_04On.png') center 89px no-repeat;
+}
+div#service_05:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_05On.png') center 89px no-repeat;
+}
+div#service_06:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_06On.png') center 89px no-repeat;
+}
+div#service_07:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_07On.png') center 89px no-repeat;
+}
+div#service_08:hover {
+    background: #f39800 url('/resource/welfaredream/images/main/web/service_08On.png') center 89px no-repeat;
+}
+
+.m_service_box {
+    width: 95%;
+    font-size: 16px;
+    color: #202020;
+    border: 1px solid #aaa;
+    padding: 18px 0 0;
+    line-height: 1.2;
+    margin-bottom: 4%;
+    font-weight: bold;
+}
+.m_service_box div {
+    padding-bottom: 75px;
+}
+
+.con_box_1 {
+    background: #fdb812 url('/resource/welfaredream/images/main/mobile/mainCon02_li01.png') no-repeat center bottom 18px;
+}
+.con_box_2 {
+    background: #fff url('/resource/welfaredream/images/main/mobile/mainCon02_li02.png') no-repeat center bottom 18px;
+}
+.con_box_3 {
+    background: #fff url('/resource/welfaredream/images/main/mobile/mainCon02_li03.png') no-repeat center bottom 18px;
+}
+.con_box_4 {
+    background: #fff url('/resource/welfaredream/images/main/mobile/mainCon02_li04.png') no-repeat center bottom 18px;
+}
+.con_box_5 {
+    background: #fff url('/resource/welfaredream/images/main/mobile/mainCon02_li05.png') no-repeat center bottom 18px;
+}
+.con_box_6 {
+    background: #fff url('/resource/welfaredream/images/main/mobile/mainCon02_li06.png') no-repeat center bottom 18px;
+}
+.con_box_7 {
+    background: #fff url('/resource/welfaredream/images/main/mobile/mainCon02_li07.png') no-repeat center bottom 18px;
+}
+.con_box_8 {
+    background: #1565c0 url('/resource/welfaredream/images/main/mobile/mainCon02_li08.png') no-repeat center bottom 18px;
+    border-color: #1565c0;
+    color: #fff;
+}
+
+/* 메인 고객사 도입혜택 */
+.benefit_swiper {
+    padding: 3rem 0 !important;
+}
+
+.benefit_swiper .card_box {
+    width: 285px !important;
+    height: 500px;
+    vertical-align: top;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 16%);
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 16%);
+    margin: 0 15px;
+    transition: all 0.2s;
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 100%;
+}
+
+.benefit_swiper .card_box:hover {
+    transform: translateY(-10px);
+    transition: all 0.2s;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.26);
+    margin-top: -10px;
+}
+
+.benefit_swiper .card_box:nth-of-type(2) {
+    background-color: #ffcb4e;
+}
+
+.m_benefit_swiper .card_box {
+    width: 285px !important;
+    height: 360px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 16%);
+    -webkit-box-shadow: 0 0 10px rgb(0 0 0 / 16%);
+    margin-right: 30px;
+    background-repeat: no-repeat;
+    background-position: right 0 bottom 0;
+    background-size: 72% !important;
+}
+
+/* 메인배너 */
+.arrowAni {
+    position: absolute;
+    z-index: 999;
+    top: 53vh;
+    left: 40px;
+    animation: arrowAni 0.5s alternate infinite;
+}
+
+@keyframes arrowAni {
+    0% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(20px);
+    }
+}
+
+.main_banner .swiper-pagination.swiper-pagination-horizontal {
+    display: block;
+    left: -31%;
+    bottom: 40px;
+}
+
+.main_banner .swiper-pagination-bullet {
+    width: 50px;
+    height: 35px;
+    display: inline-block;
+    border-radius: 20px;
+    background: none;
+    color: #202020;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Noto Sans KR', sans-serif;
+    letter-spacing: -0.06em;
+    opacity: 1;
+    padding-top: 4px;
+}
+
+.main_banner .swiper-pagination-bullet-active {
+    color: #fff;
+    background: #202020;
+}
+
+.main_banner .swiper-button-prev {
+    background: url(/resource/welfaredream/images/main/mobile/mB_prev.png) 0 0 no-repeat;
+    left: 20px;
+    width: 31px;
+}
+
+.main_banner .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after {
+    content: none;
+}
+
+.main_banner .swiper-button-next {
+    background: url(/resource/welfaredream/images/main/mobile/mB_next.png) 0 0 no-repeat;
+    right: 20px;
+    width: 31px;
+}
+
+.main_banner .swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: none;
+}
+
+/* 대표 복지혜택 */
+.SwiperWrapper {
+    display: flex;
+}
+
+#swiper_partner .swiper-pagination-bullet {
+    margin: 0 10px;
+}
+
+/* 대표 고객사 & 파트너 */
+#swiper_partner .swiper-button-next,
+#swiper_partner .swiper-button-prev {
+    width: 40px;
+}
+
+#swiper_partner .swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    background: url('/resource/welfaredream/images/main/web/commu_prev.png') no-repeat center center / 150%;
+    left: 0;
+}
+
+#swiper_partner .swiper-button-prev:after,
+.swiper-rtl .swiper-button-next {
+    content: none;
+}
+
+#swiper_partner .swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    background: url('/resource/welfaredream/images/main/web/commu_next.png') no-repeat center center / 150%;
+    right: 0;
+}
+
+#swiper_partner .swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    content: none;
+}
+
+#swiper_partner .swiper-pagination {
+    left: 600px;
+}
+
+#swiper_partner .swiper-pagination-bullet {
+    margin: 0 10px;
+}
+
+/* 온라인 상담 */
+.swiper_INQUIRY .swiper_prev {
+    background: url('/resource/welfaredream/images/main/web/online_prev.png') 0 0 no-repeat;
+    top: 515px;
+    left: 500px;
+    opacity: 1;
+}
+
+.swiper_INQUIRY .swiper_next {
+    background: url('/resource/welfaredream/images/main/web/online_next.png') 0 0 no-repeat;
+    top: 515px;
+    left: 535px;
+    opacity: 1;
+}
+
+.swiper_INQUIRY .swiper-slide.swiper-slide-active .grid {
+    border: 1px solid #fd8812;
+}
+
+.swiper_navi {
+    position: absolute;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.swiper_prev {
+    background: url('/resource/welfaredream/images/main/web/commu_prev.png') center center no-repeat;
+    /* left: 0; */
+}
+
+.swiper_next {
+    background: url('/resource/welfaredream/images/main/web/commu_next.png') center center no-repeat;
+    right: 0;
+}
+
+.swiper_slide_fin {
+    opacity: 0.3;
+}
+
+/* 평가 만족도 리뷰 */
+#swiper_review .swiper_prev {
+    background: url('/resource/welfaredream/images/main/mobile/review_prev.png') no-repeat 0 0 / 100%;
+    margin-right: 12px;
+    opacity: 1;
+    width: 28px;
+    height: 28px;
+}
+
+#swiper_review .swiper_next {
+    background: url('/resource/welfaredream/images/main/mobile/review_next.png') no-repeat 0 0 / 100%;
+    opacity: 1;
+    width: 28px;
+    height: 28px;
+}
+
+.m_swiper_navi {
+    position: absolute;
+    opacity: 1;
+    width: 24px;
+    height: 24px;
+    top: 42%;
+    transform: translate(0, -50%);
+}
+
+/* 커뮤니티 */
+.swiper_community .swiper_prev:hover {
+    background: url('/resource/welfaredream/images/main/web/commu_prevOn.png') center center no-repeat;
+}
+.swiper_community .swiper_next:hover {
+    background: url('/resource/welfaredream/images/main/web/commu_nextOn.png') center center no-repeat;
+}
+
+/* [ S ] offcanvas */
+.offcanvas {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1045;
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    visibility: hidden;
+    background-color: #fff;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+    width: 50%;
+    transform: translateX(100%);
+    height: 100%;
+}
+.offcanvas.show {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.offcanvas-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    border-bottom: 1px solid #eee;
+}
+
+.offcanvas-header .btn-close {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.offcanvas-body {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.offcanvas-footer {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #eee;
+}
+
+.offcanvas-footer .btn-del {
+    width: 100%;
+    height: 2.3rem;
+    background-color: #fff;
+    color: rgb(248 113 113);
+}
+
+.btn-del:hover {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+}
+
+.btn-save {
+    width: 100%;
+    height: 2.3rem;
+    color: #fff;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.25rem;
+}
+
+.btn-save:hover,
+.btn-search:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.btn-search {
+    width: auto;
+    height: 100%;
+    color: #fff;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.offcanvas-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.fade {
+    transition: opacity 0.15s linear;
+}
+/* [ E ] offcanvas */
+
+/* [ S ] popup */
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1045;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 500px;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%);
+    overflow: hidden;
+}
+
+.popup.show {
+    /* visibility: visible;
+    transform: translateX(0); */
+}
+
+.popup-body {
+    position: relative;
+    background: #363636;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.popup-btn {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    margin-left: -25%;
+    width: 50%;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #202020;
+    background: #fdb812;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 16px;
+    z-index: 9999;
+}
+
+.popup-footer {
+    padding: 5px 25px;
+    border-radius: 0 0 15px 15px;
+    min-height: 60px;
+    background: #363636;
+    display: flex;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+    justify-content: space-between;
+}
+
+.popup-mobile.show {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1045;
+    /* transform: translateY(100%); */
+    transition: transform 0.3s ease-in-out;
+}
+
+.popup-mobile-body {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow-y: auto;
+}
+
+.popup-mobile-footer {
+    padding: 15px 20px;
+    display: flex;
+    background-color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    /* transition: all 0.3s; */
+    justify-content: space-between;
+}
+
+.introdoc-mobile {
+    position: fixed;
+    top: 0;
+    left: 10px;
+    z-index: 1045;
+    display: flex;
+    flex-direction: column;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: none;
+    background-color: #fff;
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%);
+    overflow: hidden;
+    height: 100%;
+}
+
+.introdoc {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 1045;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    max-width: 500px;
+    background-clip: padding-box;
+    outline: 0;
+    transition: transform 0.3s ease-in-out;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 2px 55px -25px rgb(0 0 0 / 100%);
+    overflow: hidden;
+}
+
+.introdoc.show {
+    visibility: visible;
+    transform: translateX(0);
+}
+
+.introdoc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.introdoc-header .btn-close {
+    cursor: pointer;
+    margin-right: 1rem;
+}
+
+.introdoc-body {
+    flex-grow: 1;
+    padding: 1rem;
+    overflow-y: auto;
+}
+
+.introdoc-footer {
+    display: grid;
+    justify-content: center !important;
+    align-items: center;
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+}
+
+.introdoc-footer .introdoc-btn-save {
+    width: 100%;
+    background-color: #fdb812;
+    padding: 10px 50px;
+    font-size: 1rem;
+    color: #202020;
+    border-radius: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn-del:hover {
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+}
+
+.btn-save {
+    width: 100%;
+    height: 2.3rem;
+    color: #fff;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.25rem;
+}
+
+.btn-save:hover,
+.btn-search:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(37 99 235 / var(--tw-bg-opacity));
+}
+
+.btn-search {
+    width: auto;
+    height: 100%;
+    color: #fff;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.offcanvas-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1040;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.fade {
+    transition: opacity 0.15s linear;
+}
+
+/* [ S ] form */
+.form-control {
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+    padding: 0.575rem 0.75rem;
+    line-height: 1.25;
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+}
+
+.form-select {
+    width: 100%;
+    border-radius: 0.25rem;
+    border-width: 1px;
+    --tw-border-opacity: 1;
+    border-color: rgb(209 213 219 / var(--tw-border-opacity));
+    padding: 0.575rem 1.9rem 0.575rem 0.75rem;
+    line-height: 1.25;
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+    --form-select-bg-img: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-image: var(--form-select-bg-img);
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.border-danger,
+.border-danger:focus {
+    --tw-border-opacity: 1;
+    border-color: rgb(248 113 113 / var(--tw-border-opacity));
+}
+
+.form-control:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+    --tw-border-opacity: 1;
+    border-color: rgb(31 41 55 / var(--tw-border-opacity));
+}
+
+.form-control:read-only {
+    --tw-bg-opacity: 1;
+    background-color: rgb(229 229 229 / var(--tw-bg-opacity));
+}
+
+.form-label {
+    display: inline-block;
+    /* margin-bottom: 0.5rem; */
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    --tw-text-opacity: 1;
+    color: rgb(55 65 81 / var(--tw-text-opacity));
+    padding: 0.575rem 0.75rem;
+}
+
+.form-error {
+    --tw-text-opacity: 1;
+    color: rgb(239 68 68 / var(--tw-text-opacity));
+    font-style: italic;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.btn-funcs {
+    width: auto;
+    height: 100%;
+    color: #fff;
+    --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(59 130 246 / var(--tw-bg-opacity));
+    border-width: 1px;
+    border-radius: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+/* [ E ] form */
+
+.must {
+    display: inline-block;
+    position: relative;
+    padding-left: 11px;
+}
+
+.must:before {
+    width: 4px;
+    height: 4px;
+    background-color: #fb9a24;
+    content: '';
+    left: 0px;
+    position: absolute;
+    top: 17px;
+}
+
+.line-two {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/* [ S ] 2023.10.29 bbs stype by.namgu */
+.form-search {
+    width: 100%;
+    display: grid;
+    margin-bottom: 1rem;
+}
+
+.form-search .search-select {
+    width: auto;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 0px !important;
+    margin-right: 0.75rem;
+}
+
+.mobile .form-search .search-select {
+    font-size: 0.75rem;
+    margin-right: 0.25rem;
+    padding-top: 0.6rem;
+    padding-bottom: 0.6rem;
+}
+
+.form-search .search-input {
+    width: auto;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    padding: 0.625rem;
+    margin-right: 0.75rem;
+}
+
+.mobile .form-search .search-input {
+    font-size: 0.75rem;
+    line-height: 0rem;
+    margin-right: 0.25rem;
+    padding: 0.6rem;
+}
+
+.form-search .search-btn {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #ffffff;
+    line-height: 1.5rem;
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #005a98;
+    border-width: 1px;
+}
+
+.mobile .form-search .search-btn {
+    font-size: 0.75rem;
+    padding: 0.5rem 1.5rem;
+    line-height: 1.25rem;
+}
+
+.gall-wrap {
+    cursor: pointer;
+    width: 100%;
+    display: grid;
+    margin-top: 2rem;
+}
+
+.gall-wrap .img-box {
+    border-radius: 0.5rem;
+    overflow: hidden;
+    height: 16rem;
+}
+
+.mobile .gall-wrap .img-box {
+    height: 10rem;
+}
+
+.gall-wrap .txt-desc {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-align: start;
+    margin-top: 0.5rem;
+    color: #707070;
+}
+
+.mobile .gall-wrap .txt-desc {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.board-table-wrap .board-subject {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+}
+
+.mobile .board-table-wrap .board-subject {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.pag-wrap {
+    gap: 0.75rem;
+    display: inline-flex;
+    isolation: isolate;
+}
+
+.mobile .pag-wrap {
+    gap: 0.5rem;
+}
+
+.pag-wrap .class_prev,
+.pag-wrap .class_next {
+    color: #707070;
+    background-color: #f4f4f4;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    align-items: center;
+    cursor: pointer;
+    display: inline-flex;
+    position: relative;
+    cursor: pointer;
+}
+
+.mobile .pag-wrap .class_prev,
+.mobile .pag-wrap .class_next {
+    font-size: 0.75rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.pag-wrap .class_page {
+    font-weight: 600;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    color: #202020;
+}
+
+.mobile .pag-wrap .class_page {
+    font-size: 0.75rem;
+    padding-left: 0.3rem;
+    padding-right: 0.3rem;
+}
+
+.table-top-wrap {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    align-items: flex-end;
+    display: grid;
+}
+
+.mobile .table-top-wrap {
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+}
+
+.board-table-wrap {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    min-width: 100%;
+}
+
+.mobile .board-table-wrap {
+    font-size: 0.875rem;
+    line-height: 1.875rem;
+    min-width: 550px;
+    width: 100%;
+}
+
+.board-table-wrap .board-table-th {
+    font-weight: 600;
+    text-align: left;
+    color: #202020;
+    padding: 1rem 1.5rem;
+}
+
+.mobile .board-table-wrap .board-table-th {
+    font-size: 0.875rem;
+    padding: 11px 5px;
+}
+
+.board-table-wrap .board-table-td {
+    font-weight: 300;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    color: #202020;
+    padding: 1rem 1.5rem;
+}
+
+.mobile .board-table-wrap .board-table-td {
+    padding: 13px 5px;
+}
+
+.bbs-contents {
+    width: 940px;
+    margin: auto;
+}
+
+.mobile .bbs-contents {
+    width: 100%;
+}
+
+.bbs-contents img {
+    float: none;
+    display: initial;
+}
+
+.bbs-contents .top-header {
+    font-size: 1.25rem;
+    line-height: 1.8rem;
+    letter-spacing: -0.4px;
+    color: #202020;
+    font-weight: 600 !important;
+    padding: 1rem 2.5rem;
+    background-color: #f4f4f4;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.mobile .bbs-contents .top-header {
+    padding: 0.625rem;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    display: block;
+}
+
+.bbs-contents .contents-box {
+    text-align: justify;
+    padding: 3.5rem 5rem;
+    border-top-width: 1px;
+}
+
+.mobile .bbs-contents .contents-box {
+    padding: 1.25rem 1rem;
+}
+/* [ E ] 2023.10.29 bbs stype by.namgu */
+
+.tab_area .active {
+    font-weight: bold;
+    color: #f39800;
+    border-bottom: 2px solid #f39800;
+    padding-bottom: 2px;
+}

@@ -1,0 +1,484 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    font-family: 'SUIT';
+    font-size: 1rem;
+}
+
+.order_gift_back {
+    width: 100%;
+    height: 100vh;
+    background: #deebf7;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-title {
+    color: Red;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg-primary {
+    @apply bg-white dark:bg-slate-800;
+}
+
+.btn-project {
+    @apply inline-flex text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg;
+}
+
+.project-card {
+    @apply flex flex-col m-3 rounded-xl w-full
+    transition duration-300 transform border border-gray-300
+    hover:scale-105
+    hover:shadow-lg
+    dark:border-gray-200/50
+    dark:hover:shadow-gray-400/40
+
+    hover:text-blue-600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    @apply text-slate-900 dark:text-white;
+}
+
+footer {
+    @apply text-gray-600 dark:text-white
+    bg-gray-100 dark:bg-slate-600/20;
+}
+
+.mouse {
+    border: 1px solid #ebebeb;
+    border-radius: 30px;
+    cursor: pointer;
+    display: block;
+    height: 46px;
+    margin: 50px -12px -12px;
+    order: 3;
+    position: relative;
+    width: 24px;
+}
+
+.mouse:after {
+    -webkit-animation: mouse-wheel-scroll 1.5s infinite;
+    animation: mouse-wheel-scroll 1.5s infinite;
+    background-color: #ebebeb;
+    border-radius: 2px;
+    content: '';
+    display: block;
+    height: 4px;
+    left: 13px;
+    margin-left: -3px;
+    position: absolute;
+    top: 10px;
+    width: 2px;
+}
+/* 
+.w-1200 {
+    width: 1200px;
+    margin: 0 auto;
+} */
+
+.main_section {
+    padding: 65px 0;
+    width: 100%;
+}
+
+.section_wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.main_title {
+    text-align: center;
+    color: #000;
+    font-size: 42px;
+    font-weight: 800;
+    padding: 10px 0 35px 0;
+}
+
+.y_bar {
+    width: 1.5px;
+    height: 35px;
+    background: #ff333a;
+    margin: 0 auto;
+}
+
+.image-container {
+    /* width: 50vw; */
+    /* height: 50vh; */
+    position: relative;
+}
+.image-container .image {
+    width: 100%;
+    height: 100%;
+    position: relative !important;
+    object-fit: cover;
+}
+
+.btn_transparent {
+    width: 200px;
+    height: 55px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #fff;
+    display: flex;
+    align-items: center;
+}
+
+.btn_transparent .right_eff {
+    position: absolute;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #fff;
+}
+
+.btn_transparent:hover .right_eff {
+    left: 0;
+}
+
+.btn_transparente:hover,
+.btn_transparent a:hover {
+    color: #000 !important;
+}
+
+.btn_transparent a {
+    display: inline-block;
+    width: 100%;
+    color: #fff !important;
+    position: relative;
+    font-size: 1.25rem;
+    text-decoration: none;
+    transition: all 0.2s cubic-bezier(0.96, 0.25, 0.06, 1);
+    z-index: 2;
+    text-align: left;
+    text-align: center;
+}
+
+.btn_eff {
+    width: 300px;
+    height: 65px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #000;
+    background: #000;
+    display: flex;
+    align-items: center;
+}
+
+.btn_eff .right_eff {
+    position: absolute;
+    transition: all 0.3s ease-in-out;
+    width: 100%;
+    height: 100%;
+    left: -100%;
+    background-color: #1f4480 !important;
+}
+
+.btn_eff:hover .right_eff {
+    left: 0;
+}
+
+.btn_eff a {
+    display: inline-block;
+    width: 100%;
+    color: #fff !important;
+    position: relative;
+    font-size: 1.25rem;
+    text-decoration: none;
+    /* line-height:65px; */
+    /* line-height:100%; */
+    transition: all 0.5s cubic-bezier(0.96, 0.25, 0.06, 0.56);
+    z-index: 2;
+    text-align: left;
+}
+
+.btn_more a {
+    text-align: left;
+    padding-left: 2rem;
+}
+
+.btn_more:after {
+    content: '';
+    background-image: url(/resource/indendkorea/images/_lib/btn_sub_arrow_white_45x10.png);
+    width: 45px;
+    height: 10px;
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    margin-top: -10px;
+}
+
+.btn_eff a:hover {
+    color: #fff !important;
+}
+
+.slide_banners_item {
+    width: 100%;
+    height: calc(100vh - 5rem);
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.slide_banners_box {
+    width: 80%;
+    height: 600px;
+    margin: 0px auto;
+}
+
+.slide_banners_text {
+    text-align: left;
+    color: #fff;
+    width: 80%;
+    z-index: 1;
+}
+
+.slide_banners_title {
+    white-space: pre-line;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+}
+
+.slide_banners_line {
+    width: 100%;
+    height: 1px;
+    float: left;
+    background: #fff;
+    margin-bottom: 20px;
+}
+
+.slide_banners_body {
+    white-space: pre-line;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4em;
+}
+
+.m_slide_banners_item {
+    width: 100%;
+    height: 100vh;
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: center;
+    margin-top: -105px;
+}
+
+.m_slide_banners_box {
+    width: 85%;
+    height: 600px;
+    margin: 0px auto;
+}
+
+.m_slide_banners_text {
+    position: absolute;
+    bottom: 10vh;
+    text-align: left;
+    color: #fff;
+    width: 85%; /*height: 300px;*/
+    z-index: 999999999;
+    padding: 0 4%;
+    padding-bottom: 5%;
+    background: rgba(32, 32, 32, 0.7);
+}
+
+.m_slide_banners_title {
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.3em;
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.m_slide_banners_line {
+    width: 100%;
+    height: 1px;
+    float: left;
+    background: #fff;
+    margin-bottom: 15px;
+}
+
+.m_slide_banners_body {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.35em;
+    letter-spacing: -1px;
+}
+
+.body_scroll_block {
+    position: fixed;
+    top: 0px;
+    overflow-y: scroll;
+    width: 100%;
+}
+
+.absolute-middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
+}
+.hover-underline-animation {
+    position: relative;
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: -1px;
+    left: 0;
+    background-color: #0087ca;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav-stretch {
+    flex: 1 auto;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.m_btn_transparent {
+    width: 300px;
+    height: 50px;
+    position: relative;
+    border: 1px solid #000;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+/* .m_btn_transparent a {
+    display: inline-block;
+    width: 100%;
+    color: #000;
+    font-size: 1rem;
+    text-decoration: none;
+    z-index: 2;
+    text-align: left;
+} */
+
+.more_btn_img {
+    /*width:190px; height:60px;*/
+    width: 90%;
+    height: 55px;
+    line-height: 60px;
+    display: inline-block;
+    background: url('/resource/indendkorea/images/main/mobile/btn_sub_arrow_4x.png') no-repeat right 23px;
+    background-size: 25px;
+}
+
+.icon-scroll,
+.icon-scroll:before {
+    position: absolute;
+    left: 49.2%;
+}
+.icon-scroll {
+    width: 25px;
+    height: 40px;
+    top: 95%;
+    margin-top: -35px;
+    box-shadow: inset 0 0 0 2px #fff;
+    border-radius: 25px;
+    z-index: 9999;
+}
+.icon-scroll:before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    background: #fff;
+    margin-left: -2.5px;
+    top: 8px;
+    border-radius: 4px;
+    -webkit-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: scroll;
+    animation-name: scroll;
+}
+@-webkit-keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(37px);
+        transform: translateY(27px);
+    }
+}
+@keyframes scroll {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translateY(27px);
+        transform: translateY(27px);
+    }
+}
+
+/* form test */
+.errorMessage {
+    color: red;
+    font-size: 0.75rem;
+}
+.errorInput {
+    border-color: red;
+}
+
+.swiper_navi {
+    position: absolute;
+    opacity: 1;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    transform: translate(0, -50%);
+}
+
+.swiper_navi_mobile {
+    width: 24px;
+    height: 24px;
+}
+
+.swiper_navi_mobile.swiper_prev {
+    left: 0.25rem;
+}
+
+.swiper_navi_mobile.swiper_next {
+    right: 0.25rem;
+}
+
+.swiper_prev {
+    background: url('/resource/indendkorea/images/_lib/ic_main_arrow_left.png') center center no-repeat;
+    left: 1rem;
+}
+
+.swiper_next {
+    background: url('/resource/indendkorea/images/_lib/ic_main_arrow_right.png') center center no-repeat;
+    right: 1rem;
+}
+
+.swiper_slide_fin {
+    opacity: 0.3;
+}
